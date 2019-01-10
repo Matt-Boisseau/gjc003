@@ -1,14 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 	
+	public Text stepCounter; 
 	public float stepDuration, pauseDuration;
-	public int stepSize;
+	public int stepSize, foodLimit;
 	public KeyCode walkUp, walkDown, walkLeft, walkRight;
 
 	private bool moving;
+	private int food;
+
+	private void Start() {
+
+		// start with max food
+		food = foodLimit;
+		stepCounter.text = ""+food;
+	}
 
 	private void Update() {
 		
@@ -47,6 +57,10 @@ public class Player : MonoBehaviour {
 
 		// wait briefly before continuing
 		yield return new WaitForSeconds(pauseDuration);
+
+		// lose 1 food
+		food--;
+		stepCounter.text = ""+food;
 
 		// unlock movement input
 		moving = false;
