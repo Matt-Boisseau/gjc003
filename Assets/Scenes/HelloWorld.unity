@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beff9a8b62aac0247bef7cf8d08840f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepCounter: {fileID: 0}
+  stepCounter: {fileID: 243932910}
   stepDuration: 0.2
   pauseDuration: 0.1
   stepSize: 2
