@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour {
 	
 	public Text stepCounter; 
-	public float stepDuration, pauseDuration;
+	public float pauseDuration;
 	public int stepSize, foodLimit;
 	public KeyCode walkUp, walkDown, walkLeft, walkRight;
 
@@ -41,26 +41,21 @@ public class Player : MonoBehaviour {
 		// lock movement input
 		moving = true;
 
-		// get final position (will snap to this after animation)
-		Vector2 targetPosition = (Vector2)transform.position + movement * stepSize;
-
-		// animate movement (and by that I mean just slide over)
-		float time = 0;
-		while(time < stepDuration) {
-			time += Time.deltaTime;
-			transform.Translate((stepSize / stepDuration) * movement * Time.deltaTime);
-			yield return new WaitForEndOfFrame();
-		}
-
 		// snap to the predetermined final position to remove rounding errors
-		transform.position = targetPosition;
+		transform.position = (Vector2)transform.position + movement * stepSize;
 
-		// wait briefly before continuing
-		yield return new WaitForSeconds(pauseDuration);
+		// undo movement if collision
+		if(Physics2D.OverlapPoint(transform.position)) {
+			transform.position -= (Vector3)movement * stepSize;
+		}
+		else {
+			// wait briefly before continuing
+			yield return new WaitForSeconds(pauseDuration);
 
-		// lose 1 food
-		food--;
-		stepCounter.text = ""+food;
+			// lose 1 food
+			food--;
+			stepCounter.text = ""+food;
+		}
 
 		// unlock movement input
 		moving = false;
