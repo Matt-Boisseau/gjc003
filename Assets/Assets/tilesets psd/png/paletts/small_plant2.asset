@@ -11,12 +11,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_GeneratorAsset: {fileID: 0}
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: small_plant(single
+  m_Name: small_plant2
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 95870943886006995, guid: f1c83c6a90cd341a5b93959dfd58116e, type: 3}
-  - {fileID: 7874768222852383052, guid: f1c83c6a90cd341a5b93959dfd58116e, type: 3}
-  m_MinSpeed: 0.5
-  m_MaxSpeed: 2
+  - {fileID: 3068630988065798319, guid: 5a18ea4d768154815b28d9fd3a97a7e1, type: 3}
+  - {fileID: 1613235356841478543, guid: 5a18ea4d768154815b28d9fd3a97a7e1, type: 3}
+  m_MinSpeed: 0.4
+  m_MaxSpeed: 1
   m_AnimationStartTime: 0
   m_TileColliderType: 0
