@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_GeneratorAsset: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: tree1_overlap_LD
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 2880847461614319267, guid: 8715caa2bc3f0436ea0df787925b18a1, type: 3}
+  - {fileID: 303829048347893877, guid: 8715caa2bc3f0436ea0df787925b18a1, type: 3}
+  - {fileID: -5788954113712891793, guid: 8715caa2bc3f0436ea0df787925b18a1, type: 3}
+  - {fileID: 3910810185630199650, guid: 8715caa2bc3f0436ea0df787925b18a1, type: 3}
+  m_MinSpeed: 0.05
+  m_MaxSpeed: 0.5
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0
